@@ -1,0 +1,1022 @@
+/*-------------------١--------------------------*/
+/*                  ملحوظات                     */
+/*
+ملحوظة عامة:لقد  تركت لكم تعليقات لتساعدك علي تنظيم الملف بالشكل المثالي
+تأكد من أن آخر جزء هو الجزء الحاوي لكل ما هو متعلق بشكل الصفحة على الهواتف والتابلت
+إذا كان لديك أي سؤال من فضلك إرسل لي الكود وشرح المشكلة علي البريد الالكتروني
+tony@barmej.com
+*/
+/*----------------------------------------------*/
+
+/*----------------------١-----------------------*/
+/*
+Fonts & Font-faces سنقوم بوضع جميع الخطوط التي سنحتاجها هنا
+ملحوظة: إسم الخط هو إما
+Avenir Next 
+أو إن لم تجده فيمكنك استعمال خط 
+Lato
+*/
+/*---------------------------------------------*/
+@font-face {
+  font-family: AvenirNext-Regular;
+  src: url("../fonts/AvenirNext-Regular.woff");
+}
+
+@font-face {
+  font-family: AvenirNext-Bold;
+  src: url("../fonts/AvenirNext-Bold.woff");
+}
+
+@font-face {
+  font-family: AvenirNext-DemiBold;
+  src: url("../fonts/AvenirNext-DemiBold.woff");
+}
+
+@font-face {
+  font-family: AvenirNext-Medium;
+  src: url("../fonts/AvenirNext-Medium.woff");
+}
+
+/*----------------------٢-----------------------*/
+/*                  DEFAULTS                    */
+/*
+يجب عليك هنا وضع أي من الأنماط العامة الخاصة بوسوم مثل
+html, body, h1, h2, p 
+وهي الأنماط التي تنطبق على الموقع بشكل عام وكل صفحاته وليس على عنصر معين في صفحة معينة
+*/
+/*----------------------------------------------*/
+body {
+  font-family: AvenirNext-Regular, sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  text-transform: capitalize;
+}
+
+h1,
+h2 {
+  color: #2b292d;
+}
+
+h3,
+h4,
+h5 {
+  color: #000;
+}
+
+h1,
+h5 {
+  font-family: AvenirNext-Bold, sans-serif;
+}
+
+h2,
+h4 {
+  font-family: AvenirNext-DemiBold, sans-serif;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-family: AvenirNext-Medium, sans-serif;
+  font-size: 24px;
+}
+
+h4 {
+  font-size: 18px;
+}
+
+h5 {
+  font-size: 14px;
+}
+
+ul li {
+  list-style: none;
+}
+
+p {
+  font-size: 18px;
+  color: #000;
+}
+
+a {
+  font-family: AvenirNext-DemiBold, sans-serif;
+  font-size: 14px;
+  color: #2329db;
+  text-decoration: none;
+}
+
+/*----------------------٣-----------------------*/
+/*               HELPER CLASSES                 */
+/*
+يجب عليك هنا وضع أي من الأنماط الخاصة بال
+classes
+التي ستقوم بإعادة إستخدامها في أكثر من مكان خلال عملك على الموقع 
+على سبيل المثال: النمط الخاص بالزر الأزرق الذي يستعمله المصمم في كل الصفحات تقريباً
+*/
+/*----------------------------------------------*/
+.button.is-primary,
+.button.is-secondary,
+.button.is-outline {
+  border-radius: 41px;
+  font-family: AvenirNext-Bold, sans-serif;
+  font-size: 18px;
+  height: 64px;
+  padding: 20px 68px 19px 67px;
+  text-transform: capitalize;
+  width: 223px;
+}
+
+.button.is-primary {
+  background-color: #3040c4;
+  border: 1px solid #3040c4;
+  color: #fff;
+}
+
+.button.is-secondary {
+  background-color: #fff;
+  border: 1px solid #fff;
+  color: #3040c4;
+}
+
+.button.is-outline {
+  background-color: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  width: 193px;
+}
+
+.rescue-btn {
+  background-color: #3040c4;
+  border: 1px solid #3040c4;
+  border-radius: 4px;
+  color: #fff;
+  font-family: AvenirNext-Regular, sans-serif;
+  font-size: 16px;
+  padding: 10px 23px;
+}
+
+.container {
+  margin: 0 auto;
+  width: 90%;
+}
+
+/*----------------------٤-----------------------*/
+/*                    LAYOUT                    */
+/*                البناء العام للصفحة           */
+/*----------------------------------------------*/
+.page {
+  margin: 0 auto;
+  max-width: 1366px;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults,
+.howItWorks .widgets.is-howItWorks,
+.stories .widgets{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/*----------------------٥-----------------------*/
+/*                    HEADER                    */
+/*----------------------------------------------*/
+header {
+  box-sizing: border-box;
+  height: 68px;
+}
+
+header .container {
+  border-bottom: 1px solid #eef0fc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0 10px;
+}
+
+header .burger.is-visible-mobile {
+  display: none;
+}
+
+header .main-nav ul li {
+  display: inline;
+  padding-right: 37px;
+}
+
+header .main-nav ul li:last-child {
+  padding-right: 0;
+}
+
+header .main-nav ul li a {
+  font-family: AvenirNext-Medium, sans-serif;
+  font-size: 18px;
+  color: #191b43;
+}
+
+/*----------------------٦-----------------------*/
+/*                     HERO                     */
+/*----------------------------------------------*/
+.hero {
+  height: 560px;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.hero .hero__desc {
+  width: 408px;
+}
+
+.hero .hero__desc h1 {
+  width: 400px;
+}
+
+.hero .hero__desc p {
+  line-height: 30px;
+  margin-top: 21px;
+  padding-bottom: 30px;
+  width: 368px;
+}
+
+.hero .hero__image {
+  width: 722px;
+}
+
+.hero .hero__image img {
+  width: 100%;
+}
+
+/*----------------------٧-----------------------*/
+/*              MEET YOUR MATCH                 */
+/*----------------------------------------------*/
+.meetYourMatch .meetYourMatch__background {
+  background-color: #eef0fc;
+  border: 1px solid #eef0fc;
+  border-radius: 18px;
+  height: 512px;
+}
+
+.meetYourMatch .meetYourMatchــcontent {
+  margin-top: -424px;
+}
+
+.meetYourMatch .meetYourMatchــcontent h2 {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.meetYourMatch .meetYourMatchــform {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.meetYourMatch .meetYourMatchــform .form-group{
+  position: relative;
+}
+
+.meetYourMatch .meetYourMatchــform .switcher {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 28px;
+}
+
+.meetYourMatch .meetYourMatchــform .switcher input[type="checkbox"] {
+  display: none;
+}
+
+.meetYourMatch .meetYourMatchــform .switcher span {
+  color: #9fa2b8;
+  font-size: 14px;
+  margin: 0 16px;
+  text-transform: uppercase;
+}
+
+.meetYourMatch .meetYourMatchــform input[type="text"] {
+  background: #fff url("../images/map-pin.png") no-repeat scroll 17px;
+  border: 1px solid #3040c4;
+  border-radius: 41px;
+  box-sizing: border-box;
+  height: 64px;
+  width: 501px;
+  position: relative;
+  padding: 20px 324px 19px 51px;
+}
+
+.meetYourMatch .meetYourMatchــform input::placeholder {
+  font-family: AvenirNext-Regular, sans-serif;
+  font-size: 18px;
+  color: rgba(48, 64, 196, 0.5);
+  text-transform: capitalize;
+}
+
+.meetYourMatch .meetYourMatchــform .form-group .button.is-primary {
+  position: absolute;
+  right: 0;
+  width: 185px;
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults {
+  margin: auto;
+  width: 1090px;
+  overflow: hidden;
+}
+
+.meetYourMatchــcontent .widgets.is-searchResults .widget {
+  background-color: #fff;
+  box-shadow: 0px 76px 172px 0px rgba(205, 213, 228, 0.3);
+  -webkit-box-shadow: 0px 76px 172px 0px rgba(205, 213, 228, 0.3);
+  -moz-box-shadow: 0px 76px 172px 0px rgba(205, 213, 228, 0.3);
+  width: 230px;
+}
+
+.widgets.is-searchResults .widget__desc {
+  padding: 16px 0 16px 18px;
+}
+
+.widgets.is-searchResults  .widget__desc p{
+  font-size: 14px;
+}
+
+/*----------------------٨-----------------------*/
+/*               HOW IT WORKS                   */
+/*----------------------------------------------*/
+.howItWorks {
+  height: 500px;
+  text-align: center;
+  padding: 120px 0 0;
+}
+
+.howItWorks h2 {
+  padding: 42px 0;
+}
+
+.widgets.is-howItWorks .widget{
+  width: 291px;
+  margin-top: 5px;
+}
+
+.widgets.is-howItWorks .widget .widget__desc {
+  padding: 20px 0;
+}
+
+.widgets.is-howItWorks .widget .widget__desc h3{
+  padding: 20px 0 2px;
+}
+
+.widgets.is-howItWorks .widget .widget__desc p{
+  font-size: 16px;
+  color: #6A6C79;
+}
+
+/*----------------------٩-----------------------*/
+/*                 STORIES                      */
+/*----------------------------------------------*/
+.stories {
+  background-color: #f9f9f9;
+  height: 525px;
+  text-align: center;
+  padding: 95px 0 20px;
+}
+
+.stories .heading-paragraph {
+  color: #5F5F80;
+  width: 574px;
+  margin: auto;
+  padding-top: 20px;
+}
+
+.stories .widgets {
+  text-align: left;
+  padding-top: 40px;
+}
+
+.stories .widgets .widget__desc h3{
+  padding: 18px 0 10px;
+}
+
+/*----------------------١٠----------------------*/
+/*       Actions: Change A Life, Adopt A Pet    */
+/*----------------------------------------------*/
+.actions {
+  background-color: #3040c4;
+  height: 373px;
+}
+
+.actions .container {
+  text-align: center;
+  padding: 116px 0;
+}
+
+.actions h2 {
+  color: #fff;
+  padding-bottom: 58px;
+}
+
+.actions .button.is-secondary {
+  margin-right: 18px;
+}
+
+/*---------------------١١-----------------------*/
+/*                    FOOTER                    */
+/*----------------------------------------------*/
+footer {
+  padding: 45px 0 50px;
+}
+
+footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .copyrights p a {
+  font-family: AvenirNext-Regular, sans-serif;
+  color: #000;
+}
+
+footer .footer-nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer .footer-nav .item {
+  margin-right: 60px;
+  width: 150px;
+}
+
+footer .footer-nav .item h5{
+  padding: 25px 0;
+}
+
+footer .footer-nav .item ul li {
+  margin-bottom: 16px;
+}
+
+footer .footer-nav .item:last-child {
+  margin-bottom: 32px;
+}
+
+footer .footer-nav .item ul li a{
+  font-family: AvenirNext-Regular, sans-serif;
+  color: #000;
+}
+
+/*----------------------١٢----------------------*/
+/*                    Responsive                */
+/*       كل ما هو متعلق بالهواتف والتابلت       */
+/*----------------------------------------------*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  /*----------------------٢-----------------------*/
+  /*                  DEFAULTS                    */
+  /*----------------------------------------------*/
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-family: AvenirNext-Medium, sans-serif;
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 12px;
+  }
+
+  ul li {
+    list-style: none;
+  }
+
+  p {
+    font-size: 16px;
+    color: #000;
+  }
+
+  a {
+    font-family: AvenirNext-DemiBold, sans-serif;
+    font-size: 14px;
+    color: #2329db;
+    text-decoration: none;
+  }
+
+  /*----------------------٣-----------------------*/
+  /*               HELPER CLASSES                 */
+  /*----------------------------------------------*/
+  .button.is-primary,
+  .button.is-secondary,
+  .button.is-outline {
+    font-family: AvenirNext-DemiBold, sans-serif;
+    font-size: 16px;
+    height: 56px;
+    padding: 17px 52px;
+    width: 179px;
+  }
+
+  .button.is-outline {
+    width: 152px;
+  }
+
+  /*----------------------٤-----------------------*/
+  /*                    LAYOUT                    */
+  /*----------------------------------------------*/
+  .page {
+    margin: 0 auto;
+    max-width: 1024px;
+  }
+
+  section {
+    margin: 3rem 0;
+  }
+
+  /*----------------------٥-----------------------*/
+  /*                    HEADER                    */
+  /*----------------------------------------------*/
+  header .container {
+    border-bottom: 0;
+  }
+
+  /*----------------------٦-----------------------*/
+  /*                     HERO                     */
+  /*----------------------------------------------*/
+  .hero {
+    height: 560px;
+    margin: auto;
+    box-sizing: border-box;
+  }
+
+  .hero .hero__desc {
+    width: 260px;
+  }
+
+  .hero .hero__desc h1 {
+    width: 299px;
+  }
+
+  .hero .hero__desc p {
+    line-height: 24px;
+    width: 299px;
+  }
+
+  .hero .hero__image {
+    width: 350px;
+  }
+
+  .hero .hero__image img {
+    width: 100%;
+  }
+
+  /*----------------------٧-----------------------*/
+  /*              MEET YOUR MATCH                 */
+  /*----------------------------------------------*/
+  .meetYourMatch .meetYourMatch__background {
+    height: 377px;
+  }
+
+  .meetYourMatch .meetYourMatchــcontent {
+    margin-top: -317px;
+  }
+
+  .meetYourMatch .meetYourMatchــform input[type="text"] {
+    height: 56px;
+  }
+
+  .meetYourMatch .meetYourMatchــform .form-group .button.is-primary {
+    width: 185px;
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults {
+    display: grid;
+    grid-gap: 5rem;
+    grid-template-columns: 266px 299px;
+    width: 640px;
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults .widget {
+    box-sizing: border-box;
+    width: 230px;
+  }
+
+  .widgets.is-searchResults .widget__image img {
+    width: 280px;
+  }
+
+  .widgets.is-searchResults  .widget__desc p{
+    font-size: 14px;
+  }
+
+  /*----------------------٨-----------------------*/
+  /*               HOW IT WORKS                   */
+  /*----------------------------------------------*/
+  .howItWorks {
+    height: auto;
+  }
+
+  .howItWorks .widgets.is-howItWorks{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .widgets.is-howItWorks .widget{
+    width: 291px;
+    margin-top: 5px;
+  }
+
+  .widgets.is-howItWorks .widget .widget__desc {
+    padding: 20px 0;
+  }
+
+  .widgets.is-howItWorks .widget .widget__desc h3{
+    padding: 20px 0 2px;
+  }
+
+  .widgets.is-howItWorks .widget .widget__desc p{
+    font-size: 16px;
+    color: #6A6C79;
+  }
+
+  /*----------------------٩-----------------------*/
+  /*                 STORIES                      */
+  /*----------------------------------------------*/
+  .stories {
+    background-color: #f9f9f9;
+    height: auto;
+    text-align: center;
+    padding: 95px 0 42px;
+    margin: 0;
+  }
+
+  .stories .widgets{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 348px 331px;
+  }
+
+  .stories .heading-paragraph {
+    color: #5F5F80;
+    width: 574px;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .stories .widget__image img {
+    width: 329px;
+  }
+
+  .stories .widgets .widget__desc h3{
+    font-size: 24px;
+    padding: 18px 0 10px;
+  }
+
+  /*----------------------١٠----------------------*/
+  /*       Actions: Change A Life, Adopt A Pet    */
+  /*----------------------------------------------*/
+  .actions {
+    margin: 0;
+  }
+
+  /*---------------------١١-----------------------*/
+  /*                    FOOTER                    */
+  /*----------------------------------------------*/
+  footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  footer .footer-nav .item {
+    box-sizing: border-box;
+    margin: 0 11px;
+    padding: 0;
+    width: 110px;
+  }
+
+  footer .footer-nav .item:nth-child(3) {
+    width: 120px;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 767px) {
+  /*----------------------٢-----------------------*/
+  /*                  DEFAULTS                    */
+  /*----------------------------------------------*/
+  h1 {
+    font-size: 36px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  a {
+    font-size: 14px;
+  }
+
+  /*----------------------٣-----------------------*/
+  /*               HELPER CLASSES                 */
+  /*----------------------------------------------*/
+  .button.is-primary,
+  .button.is-secondary,
+  .button.button.is-outline {
+    font-family: AvenirNext-DemiBold, sans-serif;
+    font-size: 16px;
+  }
+
+  .button.is-primary {
+    height: 56px;
+    padding: 17px 58px;
+    width: 190px;
+  }
+
+  .button.is-secondary,
+  .button.is-outline {
+    height: 50px;
+    padding: 14px 40px;
+    width: 155px;
+  }
+
+  /*----------------------٤-----------------------*/
+  /*                    LAYOUT                    */
+  /*----------------------------------------------*/
+  .page {
+    margin: 0 auto;
+    max-width: auto;
+    overflow: hidden;
+  }
+
+  section {
+    margin: 0;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 75%;
+  }
+
+  /*----------------------٥-----------------------*/
+  /*                    HEADER                    */
+  /*----------------------------------------------*/
+  header .container {
+    border-bottom: 1px solid #eef0fc;
+    padding: 22px 0 10px;
+  }
+
+  header .burger.is-visible-mobile {
+    background: #2B292D;
+    border: 0;
+    display: block;
+    height: 3px;
+    position: relative;
+    width: 23px;
+  }
+  
+  header .burger.is-visible-mobile::before,
+  header .burger.is-visible-mobile::after  {
+    background: #2B292D;
+    content: '';
+    display: block;
+    height: 3px;
+    left: 0;
+    position: absolute;
+    width: 23px;
+  }
+  
+  header .burger.is-visible-mobile::before {
+    top: -7px;
+  }
+  
+  header .burger.is-visible-mobile::after {
+    top: 7px;
+  }
+
+
+  header .main-nav {
+    display: none;
+  }
+
+  /*----------------------٦-----------------------*/
+  /*                     HERO                     */
+  /*----------------------------------------------*/
+  .hero {
+    height: auto;
+    margin: 0 auto;
+    padding: 63px 0 0;
+    box-sizing: border-box;
+  }
+
+  .hero .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero .hero__desc {
+    width: 300px;
+  }
+
+  .hero .hero__desc h1 {
+    width: 327px;
+  }
+
+  .hero .hero__desc p {
+    line-height: 26px;
+    width: 318px;
+  }
+
+  .hero .hero__image {
+    margin-top: 30px;
+    width: 379px;
+  }
+
+  .hero .hero__image img {
+    width: 100%;
+  }
+
+  /*----------------------٧-----------------------*/
+  /*              MEET YOUR MATCH                 */
+  /*----------------------------------------------*/
+  .meetYourMatch .container {
+    width: 100%;
+  }
+
+  .meetYourMatch .meetYourMatch__background {
+    border-radius: 0 0 18px 18px;
+    height: 454px;
+  }
+
+  .meetYourMatch .meetYourMatchــcontent {
+    margin-top: -370px;
+  }
+
+  .meetYourMatch .meetYourMatchــform input[type="text"] {
+    height: 58px;
+    padding: 0;
+    width: 313px;
+  }
+
+  .meetYourMatch .meetYourMatchــform input::placeholder {
+    font-family: AvenirNext-Regular, sans-serif;
+    font-size: 16px;
+    color: rgba(48, 64, 196, 0.5);
+    text-transform: capitalize;
+    padding-left: 55px;
+  }
+
+  .meetYourMatch .meetYourMatchــform .form-group .button.is-primary {
+    width: 114px;
+    padding: 18px 32px;
+    height: 58px;
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+  }
+
+  .meetYourMatchــcontent .widgets.is-searchResults .widget {
+    margin-bottom: 30px;
+    width: 330px;
+  }
+
+  .widgets.is-searchResults .widget__image img {
+    width: 100%;
+  }
+
+  /*----------------------٨-----------------------*/
+  /*               HOW IT WORKS                   */
+  /*----------------------------------------------*/
+  .howItWorks {
+    height: auto;
+    padding: 30px 0;
+  }
+
+  .howItWorks .widgets.is-howItWorks{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .widgets.is-howItWorks .widget{
+    width: 291px;
+    margin-top: 5px;
+  }
+
+  .widgets.is-howItWorks .widget .widget__desc {
+    padding: 20px 0;
+  }
+
+  /*----------------------٩-----------------------*/
+  /*                 STORIES                      */
+  /*----------------------------------------------*/
+  .stories {
+    height: auto;
+  }
+
+  .stories .widgets{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .stories .heading-paragraph {
+    color: #5F5F80;
+    width: auto;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+  .stories .widget__image img {
+    width: 329px;
+  }
+
+  .stories .widgets .widget__desc {
+    margin-bottom: 30px;
+  }
+  
+  /*----------------------١٠----------------------*/
+  /*       Actions: Change A Life, Adopt A Pet    */
+  /*----------------------------------------------*/
+  .actions {
+    margin: 0;
+  }
+
+  .actions .container {
+    width: 100%;
+  }
+
+  .actions .button.is-secondary {
+    margin-right: 12px;
+  }
+
+  /*---------------------١١-----------------------*/
+  /*                    FOOTER                    */
+  /*----------------------------------------------*/
+  footer {
+    padding: 45px 0 50px;
+  }
+
+  footer .container {
+    display: block;
+    width: 90%;
+  }
+
+  footer .copyrights{
+    margin-bottom: 25px;
+  }
+
+  footer .footer-nav {
+    display: grid;
+    grid-gap: 1rem 3rem;
+    grid-template-columns: 150px 140px;
+  }
+}
